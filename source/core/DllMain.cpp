@@ -135,7 +135,8 @@ internal:
 
 static void ForceCLRInit()
 {
-	// Just a function that doesn't do anything, except for being compiled to MSIL
+	// Just a function that ensures CLR is initialized during startup
+	SHVDN::Log::Clear();
 }
 
 static void ScriptHookVDotNet_ManagedInit()
